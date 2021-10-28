@@ -1,0 +1,267 @@
+$color1: #1e1d1c;
+$color2: #8d7a5c;
+$color3: #f9f8f7;
+$color4: #22222280;
+
+:root {
+  --padding-x: 8rem;
+  --padding-y: 10rem;
+}
+
+@media screen and (max-width: 991px) {
+  :root {
+    --padding-x: 5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --padding-x: 3rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  :root {
+    --padding-x: 1.5rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  padding-top: 135px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 110px;
+  }
+
+  @media screen and (max-width: 575px) {
+    padding-top: 98px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+#navbar,
+#reservation,
+#menu,
+#features {
+  padding: var(--padding-y) var(--padding-x) !important;
+}
+
+.theme-btn {
+  background-color: $color2;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 4px;
+  padding: 1rem 3rem;
+  border-radius: 0;
+  margin-top: 1.5rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 0.75rem;
+  }
+
+  &:hover {
+    color: $color2;
+    background-color: $color1;
+  }
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color1;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1;
+
+  * {
+    color: #fff;
+  }
+
+  .img {
+    width: 3.5rem;
+
+    @media screen and (max-width: 767px) {
+      width: 2.5rem;
+    }
+
+    @media screen and (max-width: 575px) {
+      width: 2rem;
+    }
+  }
+
+  .nav {
+    .nav-item {
+      font-size: 1.25rem;
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+}
+
+#hero {
+  background-image: url("../img/bg-hero.jpg");
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position-y: bottom;
+
+  h6 {
+    letter-spacing: 5px;
+    color: #fff;
+    font-weight: 800;
+  }
+
+  h1 {
+    font-weight: 800;
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      font-size: 4rem;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 3rem;
+    }
+  }
+}
+
+#reservation {
+  .text {
+    @media screen and (min-width: 992px) {
+      padding-right: 4rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-top: 4rem;
+    }
+
+    .signature {
+      width: unset;
+    }
+  }
+
+  .reservation-card-wrapper {
+    background-color: $color3;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .reservation-card {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+
+      .body {
+        width: 100%;
+        padding: 0 0.25rem;
+
+        .section {
+          padding: 1rem 0;
+
+          h4 {
+            color: $color4;
+            font-size: 0.95rem;
+            margin-bottom: 2.5rem;
+            font-weight: 800;
+          }
+        }
+
+        .btn {
+          width: 100%;
+          padding-left: 8px;
+          padding-right: 8px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+#menu {
+  padding-top: 0 !important;
+
+  img.burger-top {
+    width: unset;
+  }
+
+  h1.main {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 2rem;
+
+    @media screen and (max-width: 767px) {
+      font-size: 4rem;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 3rem;
+    }
+  }
+
+  .menu-2 {
+    h1 {
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .item-card {
+      position: relative;
+
+      .desc {
+        color: #adadadad;
+      }
+
+      .badge {
+        position: absolute;
+        top: 24px;
+        left: 12px;
+        padding: 0.75rem 1.5rem;
+        background-color: $color2;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+#features {
+  padding-top: 0 !important;
+
+  .feature {
+    padding: 0 1rem;
+
+    img {
+      width: unset;
+      margin-right: 1rem;
+    }
+
+    p {
+      @media screen and (min-width: 992px) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
